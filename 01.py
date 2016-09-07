@@ -245,7 +245,7 @@ def demo(ham: str, eggs: str = 'organic_eggs') -> str:  # function(parameter: ty
     return print(ham + ' and ' + eggs)
 
 
-demo('span')
+demo('spam')
 
 """coding style"""
 # name classes as CamelCase and functions/methods as lower_case_with_underscore
