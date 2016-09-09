@@ -200,20 +200,3 @@ print(6 < 7 <= 7 == 7 <= 7 < 8)
 # comparisons can be linked by Boolean operators and/or, which are short-circuit operators
 # comparisons can be negated by not; not has higher priority than and/or
 print(not 3 > 4 and 6 <= 6)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
