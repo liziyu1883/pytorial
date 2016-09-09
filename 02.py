@@ -111,7 +111,7 @@ matrix_column_zip = list(zip(*matrix_row))  # zip() function does the transpose 
 print(matrix_column_zip)  # note that [1, 5, 9] is written as a tuple (1, 5, 9) (instead of sublist) with zip()
 
 """tuple"""
-# list and string are two examples of the sequence data type; tuple is also a sequence data type and is immutable
+# tuple is an immutable datatype
 t = 12345, 67890, 'number', 'integer'  # t is then a tuple
 print(t)
 
@@ -125,6 +125,19 @@ print(t_mutable_object)
 t_empty = ()
 t_singleton = 'hello',  # need a comma
 a, b = t_mutable_object  # unpacking a tuple: the number of variables on the LHS must agree with the tuple on RHS
+
+"""sequence"""
+
+"""
+list, string and tuple are examples of the sequence data type
+sequences can be compared in lexicographical order - the first pair determines the order is the order of the sequences
+[1, 2, 3] > [1, 1, 1] because 1 == 1, 2 > 1
+(1, 2, 1) < (1, 2, 3) because 1 == 1, 2 == 2, 1 < 3
+{1, 2, 4} > {1, 2, 3, 4} because 1 == 1, 2 == 2, 4 > 3
+(1, 2) < (1, 2, 0) because 1 == 1, 2 == 2, 0 > ()
+(1, 2, 3) == (1.0, 2.0, 3.0) because 1 == 1.0, 2 == 2.0, 3 == 3.0
+(1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4) because ('aa', 'ab') < ('abc', 'a') as 'aa' < 'abc'
+"""
 
 """set"""
 # set is a data type that is unordered with no duplicate elements
@@ -170,6 +183,24 @@ for index, value in enumerate(a):
     print(index, value)
 
 # to loop over two or more sequences at the same time, we use the zip() function
+questions = ['name', 'ability', 'occupation']
+answers = ['Marisa', 'using magic', 'magician']
+for q, a in zip(questions, answers):
+    print('What is her {0}?    It is {1}.'.format(q, a))
+
+# to loop over a reversed or sorted sequence, just use reversed() and sorted()
+# use in operator to determine if a value is in a sequence: only test the value of the elements of a sequence
+print(4 not in [2, 3, 4])
+print([1] in [1, 4, 5])
+print([1] in [[1], 4, 5])
+
+# comparisons can be nested
+print(6 < 7 <= 7 == 7 <= 7 < 8)
+
+# comparisons can be linked by Boolean operators and/or, which are short-circuit operators
+# comparisons can be negated by not; not has higher priority than and/or
+print(not 3 > 4 and 6 <= 6)
+
 
 
 
