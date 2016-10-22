@@ -7,6 +7,7 @@ complex_number = 3 + 6j  # Python has built in support for complex number, denot
 complex_number_a, complex_number_b = 2 + 4j, 7 + 8j  # multiple assignment
 # in Python console, we can use the variable _ to indicate the last printed expression
 # one should use _ as read only and never assign value to _ as it creates another local variable called _
+# we can use float() to convert a string to numbers
 
 """string"""
 string_quotes = 'String are represented inside single quotes, ' + "or double quotes. "
